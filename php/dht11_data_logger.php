@@ -13,7 +13,7 @@ class DHT11 {
     }
 
     function storeInDB($temperature, $humidity) {
-        $query = "INSERT INTO TempAndHumidityValues (humidity, temperature) VALUES ('$humidity', '$temperature')";
+        $query = "INSERT INTO dht11_data (humidity, temperature) VALUES ('$humidity', '$temperature')";
         $result = mysqli_query($this->link, $query) or die('Errant query: ' . $query);
     }
 }
